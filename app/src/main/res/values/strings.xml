@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">RecyclerPaging</string>
+    <string name="cashback">%1$d \%%</string>
+    <string name="preloader_text">Подгрузка компаний</string>
+    <string name="toolbar_title">Управление картами</string>
+    <string name="score_postfix">баллов</string>
+    <string name="cashback_title">Кэшбек</string>
+    <string name="level_title">Уровень</string>
+    <string name="button_text">Подробнее</string>
+</resources>

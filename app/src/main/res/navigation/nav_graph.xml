@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/recycler_main_fragment">
+
+    <fragment
+        android:id="@+id/recycler_main_fragment"
+        android:label="Main"
+        android:name="com.gmail.vlaskorobogatov.ui.main.RecyclerFragment"
+        tools:layout="@layout/fragment_main" />
+</navigation>

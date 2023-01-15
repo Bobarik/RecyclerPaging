@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="cardColors"
+            type="com.gmail.vlaskorobogatov.ui.adapters.CardColors" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/bank_card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin1"
+        android:layout_marginTop="@dimen/margin1"
+        app:cardBackgroundColor="@{cardColors.cardBackgroundColor}"
+        app:cardCornerRadius="@dimen/card_corner">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/card_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin1"
+                android:textColor="@{cardColors.highlightTextColor}"
+                android:textSize="@dimen/text1"
+                app:layout_constraintBottom_toBottomOf="@id/card_logo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/card_logo"
+                tools:text="Bonus Money" />
+
+            <ImageView
+                android:id="@+id/card_logo"
+                android:layout_width="@dimen/logoSize"
+                android:layout_height="@dimen/logoSize"
+                android:layout_marginEnd="@dimen/margin1"
+                android:layout_marginTop="@dimen/margin1"
+                android:src="@drawable/ic_launcher_background"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/card_top_divider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin1"
+                android:layout_marginTop="@dimen/margin2"
+                app:layout_constraintTop_toBottomOf="@id/card_logo" />
+
+            <TextView
+                android:id="@+id/card_score_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin1"
+                android:layout_marginTop="@dimen/margin1"
+                android:textColor="@{cardColors.highlightTextColor}"
+                android:textSize="@dimen/text0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/card_top_divider"
+                tools:text="200" />
+
+            <TextView
+                android:id="@+id/card_score_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin2"
+                android:text="@string/score_postfix"
+                android:textColor="@{cardColors.textColor}"
+                android:textSize="@dimen/text2"
+                app:layout_constraintBottom_toBottomOf="@id/card_score_count"
+                app:layout_constraintStart_toEndOf="@id/card_score_count" />
+
+            <TextView
+                android:id="@+id/card_cashback_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin1"
+                android:layout_marginTop="@dimen/margin1"
+                android:text="@string/cashback_title"
+                android:textColor="@{cardColors.textColor}"
+                android:textSize="@dimen/text4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/card_score_count" />
+
+            <TextView
+                android:id="@+id/card_level_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin3"
+                android:text="@string/level_title"
+                android:textColor="@{cardColors.textColor}"
+                android:textSize="@dimen/text4"
+                app:layout_constraintStart_toEndOf="@id/card_cashback_title"
+                app:layout_constraintTop_toTopOf="@id/card_cashback_title" />
+
+            <TextView
+                android:id="@+id/card_cashback_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin2"
+                android:textColor="@{cardColors.highlightTextColor}"
+                android:textSize="@dimen/text3"
+                app:layout_constraintStart_toStartOf="@id/card_cashback_title"
+                app:layout_constraintTop_toBottomOf="@id/card_cashback_title"
+                tools:text="1 %" />
+
+            <TextView
+                android:id="@+id/card_level_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin2"
+                android:textColor="@{cardColors.highlightTextColor}"
+                android:textSize="@dimen/text3"
+                app:layout_constraintStart_toStartOf="@id/card_level_title"
+                app:layout_constraintTop_toBottomOf="@id/card_cashback_title"
+                tools:text="Базовый уровень тест" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/card_bottom_divider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin1"
+                android:layout_marginTop="@dimen/margin2"
+                app:layout_constraintTop_toBottomOf="@id/card_cashback_value" />
+
+            <androidx.constraintlayout.utils.widget.ImageFilterButton
+                android:id="@+id/card_icon_eye"
+                android:layout_width="@dimen/icon_size"
+                android:layout_height="@dimen/icon_size"
+                android:layout_marginEnd="@dimen/margin3"
+                android:layout_marginTop="@dimen/margin1"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:scaleType="fitCenter"
+                android:src="@drawable/eye_white"
+                app:layout_constraintEnd_toStartOf="@id/card_icon_bin"
+                app:layout_constraintTop_toBottomOf="@id/card_bottom_divider"
+                app:tint="@{cardColors.mainColor}"
+                tools:ignore="ContentDescription"
+                tools:tint="@color/blue" />
+
+            <androidx.constraintlayout.utils.widget.ImageFilterButton
+                android:id="@+id/card_icon_bin"
+                android:layout_width="@dimen/icon_size"
+                android:layout_height="@dimen/icon_size"
+                android:layout_marginEnd="@dimen/margin3"
+                android:layout_marginTop="@dimen/margin1"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:scaleType="fitCenter"
+                android:src="@drawable/bin_white"
+                app:layout_constraintEnd_toStartOf="@id/card_button_details"
+                app:layout_constraintTop_toBottomOf="@id/card_bottom_divider"
+                app:tint="@{cardColors.accentColor}"
+                tools:ignore="ContentDescription"
+                tools:tint="@color/red" />
+
+            <Button
+                android:id="@+id/card_button_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin1"
+                android:layout_marginEnd="@dimen/margin1"
+                android:layout_marginTop="@dimen/margin2"
+                android:backgroundTint="@{cardColors.backgroundColor}"
+                android:text="@string/button_text"
+                android:textColor="@{cardColors.mainColor}"
+                android:textSize="@dimen/text3"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/card_bottom_divider"
+                tools:backgroundTint="@color/lightGray"
+                tools:textColor="@color/blue" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

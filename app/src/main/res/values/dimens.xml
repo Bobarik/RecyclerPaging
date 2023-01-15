@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="text0">20sp</dimen>
+    <dimen name="text1">16sp</dimen>
+    <dimen name="text2">12sp</dimen>
+    <dimen name="text3">10sp</dimen>
+    <dimen name="text4">8sp</dimen>
+    <dimen name="margin1">12dp</dimen>
+    <dimen name="logoSize">32dp</dimen>
+    <dimen name="icon_size">12dp</dimen>
+    <dimen name="margin2">6dp</dimen>
+    <dimen name="margin3">34dp</dimen>
+    <dimen name="card_corner">48dp</dimen>
+    <dimen name="size_preloader">32dp</dimen>
+</resources>
